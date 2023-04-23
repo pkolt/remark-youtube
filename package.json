@@ -1,0 +1,72 @@
+{
+  "name": "remark-youtube",
+  "version": "1.0.0",
+  "description": "Remark plugin for youtube player",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "repository": "pkolt/remark-youtube",
+  "scripts": {
+    "test": "ts-node-esm src/test.ts",
+    "build-esm": "tsc",
+    "build-cjs": "tsc -p ./tsconfig.cjs.json",
+    "build-types": "tsc -p ./tsconfig.types.json",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && npm run build-esm && npm run build-cjs",
+    "prepare": "npm run build",
+    "format": "prettier --check src",
+    "format:fix": "prettier --write src"
+  },
+  "keywords": [
+    "remark",
+    "rehype",
+    "youtube",
+    "iframe",
+    "embedded"
+  ],
+  "bugs": {
+    "url": "https://github.com/pkolt/remark-youtube/issues",
+    "email": "pkoltyshev@gmail.com"
+  },
+  "author": "Pavel Koltyshev <pkoltyshev@gmail.com>",
+  "files": [
+    "README.md",
+    "LICENSE.md",
+    "dist/esm/index.js",
+    "dist/esm/index.d.ts",
+    "dist/cjs/index.js",
+    "dist/cjs/index.d.ts"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 18"
+  },
+  "devDependencies": {
+    "@types/mdast": "^3.0.11",
+    "@types/node": "^18.15.13",
+    "prettier": "^2.8.7",
+    "rehype-stringify": "^9.0.3",
+    "rimraf": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "mdast-util-find-and-replace": "^2.2.2"
+  },
+  "peerDependencies": {
+    "remark": "^14.0.2",
+    "remark-rehype": "^10.1.0"
+  }
+}
