@@ -58,6 +58,7 @@
     "@types/node": "^18.15.13",
     "prettier": "^2.8.7",
     "rehype-stringify": "^9.0.3",
+    "release-it": "^15.10.1",
     "rimraf": "^5.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
