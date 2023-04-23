@@ -1,4 +1,4 @@
-name: Check format and run tests
+name: main
 
 on:
   push:
