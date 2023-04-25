@@ -1,6 +1,8 @@
 # remark-youtube ![](https://github.com/pkolt/remark-youtube/workflows/main/badge.svg)
 
-Embed a Youtube Video in your Markdown.
+Embed YouTube player in your Markdown.
+
+Supports ESM modules 👍
 
 ## Install
 

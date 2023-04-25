@@ -52,4 +52,14 @@ describe('transform youtube link to iframe player', () => {
       .process(markdown2);
     assert.match(String(file), /<iframe/);
   });
+
+  it('setup sizes', async () => {
+    const file = await unified()
+      .use(remarkParse)
+      .use(remarkYoutube, { width: 640, height: 320 })
+      .use(remarkRehype)
+      .use(rehypeStringify)
+      .process(markdown2);
+    assert.match(String(file), /<iframe width="640" height="320"/);
+  });
 });

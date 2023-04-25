@@ -1,7 +1,7 @@
 {
   "name": "remark-youtube",
   "version": "1.0.1-2",
-  "description": "Remark plugin for youtube player",
+  "description": "Remark plugin for youtube",
   "type": "module",
   "main": "dist/cjs/index.js",
   "types": "dist/cjs/index.d.ts",
