@@ -60,6 +60,7 @@
     "prettier": "^2.8.7",
     "rehype-stringify": "^9.0.3",
     "release-it": "^15.10.1",
+    "remark-gfm": "^3.0.1",
     "remark-parse": "^10.0.1",
     "rimraf": "^5.0.0",
     "ts-node": "^10.9.1",

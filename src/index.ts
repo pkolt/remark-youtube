@@ -1,4 +1,4 @@
-import type { Root, Text } from 'mdast';
+import type { Root, Text, Link } from 'mdast';
 import { visit } from 'unist-util-visit';
 
 const DEFAULT_WIDTH = 560;
@@ -12,30 +12,34 @@ interface Options {
 
 const remarkYoutubePlugin = (options?: Options) => (tree: Root) => {
   visit(tree, 'paragraph', (node) => {
-    let id = '';
-    let value = '';
+    let videoId = '';
+    let videoUrl = '';
     for (const child of node.children) {
-      if (child.type === 'text') {
-        const match = child.value.match(URL_PATTERN);
+      // parse type = 'link' for 'remark-gfm'
+      if (child.type === 'text' || child.type === 'link') {
+        const url = (child as Link)?.url ?? (child as Text)?.value;
+        const match = url.match(URL_PATTERN);
         if (match && match[1]) {
-          id = match[1];
-          value = child.value;
+          videoId = match[1];
+          videoUrl = url;
           break;
         }
       }
     }
 
-    if (id && value) {
+    if (videoId && videoUrl) {
       const text: Text = {
         type: 'text',
-        value: value,
+        value: videoUrl,
         data: {
           hName: 'iframe',
           hProperties: {
             width: options?.width ?? DEFAULT_WIDTH,
             height: options?.height ?? DEFAULT_HEIGHT,
-            src: `https://www.youtube.com/embed/${id}?controls=0`,
+            src: `https://www.youtube.com/embed/${videoId}`,
             frameborder: '0',
+            allow:
+              'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
             allowfullscreen: true,
           },
           hChildren: [],
