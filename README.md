@@ -13,13 +13,15 @@ npm i remark-youtube
 2. Setup plugin:
 
 ```typescript
-import { remark } from 'remark';
+import { unified } from 'unified'
+import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import remarkYoutube from 'remark-youtube';
 
 const input = 'your markdown content';
 
-remark()
+unified()
+    .use(remarkParse)
     .use(remarkYoutube)
     .use(remarkRehype)
     .process(input)
@@ -33,9 +35,9 @@ remark()
 ```markdown
 ## Watch this video
 
-youtube:https://youtu.be/enTFE2c68FQ
+https://youtu.be/enTFE2c68FQ
 
-youtube:https://www.youtube.com/watch?v=enTFE2c68FQ
+https://www.youtube.com/watch?v=enTFE2c68FQ
 ```
 
 ## License
