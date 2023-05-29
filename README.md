@@ -45,7 +45,7 @@ https://www.youtube.com/watch?v=enTFE2c68FQ
 ## Usage with react-markdown
 
 ```tsx
-import ReactMarkdown, { Components } from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkYoutube from 'remark-youtube';
 
