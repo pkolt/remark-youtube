@@ -42,6 +42,26 @@ https://youtu.be/enTFE2c68FQ
 https://www.youtube.com/watch?v=enTFE2c68FQ
 ```
 
+## Usage with react-markdown
+
+```tsx
+import ReactMarkdown, { Components } from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import remarkYoutube from 'remark-youtube';
+
+interface PageProps {
+    markdownContent?: string
+}
+
+export const Page: React.FC<PageProps> = ({ markdownContent = '' }) => {
+  return (
+    <ReactMarkdown remarkPlugins={[remarkGfm, remarkYoutube]}>
+        {markdownContent}
+    </ReactMarkdown>
+  );
+};
+```
+
 ## License
 
   [MIT](LICENSE.md)
