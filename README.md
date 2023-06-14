@@ -19,6 +19,8 @@ import { unified } from 'unified'
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import remarkYoutube from 'remark-youtube';
+// For CommonJS
+// const remarkYoutube = require('remark-youtube').default;
 
 const input = 'your markdown content';
 
@@ -60,6 +62,22 @@ export const Page: React.FC<PageProps> = ({ markdownContent = '' }) => {
     </ReactMarkdown>
   );
 };
+```
+
+## TypeScript
+
+If you're having trouble importing a module into TypeScript, try adding settings:
+
+```json
+// tsconfig.json
+{
+    "compilerOptions": {
+      //...
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      //...
+    }
+  }
 ```
 
 ## License
