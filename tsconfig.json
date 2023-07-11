@@ -1,3 +1,15 @@
 {
-  "extends": "./tsconfig.esm.json"
+  "compilerOptions": {
+    "rootDir": "./src",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ESNext",
+    "module": "NodeNext",
+    "outDir": "./dist",
+    "verbatimModuleSyntax": true,
+    "moduleResolution": "NodeNext",
+    "declaration": true
+  },
+  "include": ["src/index.ts"],
+  "exclude": ["node_modules"]
 }

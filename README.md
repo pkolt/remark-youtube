@@ -2,7 +2,9 @@
 
 Embed YouTube player in your Markdown.
 
-Supports ESM modules 👍
+👍 This package is ESM only!
+
+❌ CommonJS modules not supported!
 
 ## Install
 
@@ -18,9 +20,8 @@ npm i remark-youtube
 import { unified } from 'unified'
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
+import rehypeStringify from 'rehype-stringify';
 import remarkYoutube from 'remark-youtube';
-// For CommonJS
-// const remarkYoutube = require('remark-youtube').default;
 
 const input = 'your markdown content';
 
@@ -28,6 +29,7 @@ unified()
     .use(remarkParse)
     .use(remarkYoutube)
     .use(remarkRehype)
+    .use(rehypeStringify)
     .process(input)
     .then((file) => {
         console.log(String(file))
@@ -62,22 +64,6 @@ export const Page: React.FC<PageProps> = ({ markdownContent = '' }) => {
     </ReactMarkdown>
   );
 };
-```
-
-## TypeScript
-
-If you're having trouble importing a module into TypeScript, try adding settings:
-
-```json
-// tsconfig.json
-{
-    "compilerOptions": {
-      //...
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      //...
-    }
-  }
 ```
 
 ## License
