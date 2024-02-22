@@ -3,7 +3,7 @@ import { visit } from 'unist-util-visit';
 
 const DEFAULT_WIDTH = 560;
 const DEFAULT_HEIGHT = 315;
-const URL_PATTERN = /^https:\/\/(?:youtu\.be\/|www\.youtube\.com\/watch\?v=)(\w+)$/;
+const URL_PATTERN = /^https:\/\/(?:youtu\.be\/|www\.youtube\.com\/watch\?v=)([0-9A-Za-z_-]+)$/;
 
 interface Options {
   width?: number;
