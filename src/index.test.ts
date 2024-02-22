@@ -8,7 +8,7 @@ import rehypeStringify from 'rehype-stringify';
 import remarkYoutube from './index.js';
 
 const markdown1 = '# Header\n\nNew Paragraph\n\nhttps://youtu.be/enTFE2c68FQ\n\n';
-const markdown2 = '# Header\n\nNew Paragraph\n\nhttps://www.youtube.com/watch?v=enTFE2c68FQ\n\n';
+const markdown2 = '# Header\n\nNew Paragraph\n\nhttps://www.youtube.com/watch?v=-enTFE2c68FQ\n\n';
 
 describe('transform youtube link to iframe player', () => {
   it('type is link (youtu.be)', async () => {
