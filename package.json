@@ -42,23 +42,23 @@
     "node": ">= 18"
   },
   "devDependencies": {
-    "@types/mdast": "^3.0.11",
-    "@types/node": "^18.15.13",
-    "prettier": "^2.8.7",
-    "rehype-stringify": "^9.0.3",
-    "release-it": "^15.10.1",
-    "remark-gfm": "^3.0.1",
-    "remark-parse": "^10.0.1",
-    "rimraf": "^5.0.0",
-    "ts-node": "^10.9.1",
-    "ts-rename": "^0.1.0",
-    "typescript": "^5.0.4",
-    "unified": "^10.1.2"
+    "@types/mdast": "^4.0.3",
+    "@types/node": "^20.11.30",
+    "prettier": "^3.2.5",
+    "rehype-stringify": "^10.0.0",
+    "release-it": "^17.1.1",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "ts-rename": "^0.2.0",
+    "typescript": "^5.4.3",
+    "unified": "^11.0.4"
   },
   "dependencies": {
-    "unist-util-visit": "^4.1.2"
+    "unist-util-visit": "^5.0.0"
   },
   "peerDependencies": {
-    "remark-rehype": "^10.1.0"
+    "remark-rehype": "^11.1.0"
   }
 }
