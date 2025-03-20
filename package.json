@@ -1,6 +1,6 @@
 {
   "name": "remark-youtube",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Remark plugin for youtube",
   "type": "module",
   "module": "./dist/index.js",
