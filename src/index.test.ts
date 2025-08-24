@@ -9,6 +9,7 @@ import remarkYoutube from './index.js';
 
 const markdown1 = '# Header\n\nNew Paragraph\n\nhttps://youtu.be/enTFE2c68FQ\n\n';
 const markdown2 = '# Header\n\nNew Paragraph\n\nhttps://www.youtube.com/watch?v=-enTFE2c68FQ\n\n';
+const markdown3 = '# Header\n\nNew Paragraph\n\nhttps://youtu.be/gU8F2NWggsA?si=tJGPy_wCOTVn8RnU\n\n';
 
 describe('transform youtube link to iframe player', () => {
   it('type is link (youtu.be)', async () => {
@@ -61,5 +62,16 @@ describe('transform youtube link to iframe player', () => {
       .use(rehypeStringify)
       .process(markdown2);
     assert.match(String(file), /<iframe width="640" height="320"/);
+  });
+
+  it('type is link with si (youtu.be)', async () => {
+    const file = await unified()
+      .use(remarkParse)
+      .use(remarkGfm)
+      .use(remarkYoutube)
+      .use(remarkRehype)
+      .use(rehypeStringify)
+      .process(markdown3);
+    assert.match(String(file), /<iframe/);
   });
 });
