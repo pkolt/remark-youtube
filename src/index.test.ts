@@ -22,8 +22,8 @@ describe('transform youtube link to iframe player', () => {
       .process(markdown1);
     assert.ok(
       String(file).includes(
-        '<iframe width="560" height="315" src="https://www.youtube.com/embed/enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
-      )
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+      ),
     );
   });
 
@@ -37,8 +37,8 @@ describe('transform youtube link to iframe player', () => {
       .process(markdown2);
     assert.ok(
       String(file).includes(
-        '<iframe width="560" height="315" src="https://www.youtube.com/embed/-enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
-      )
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/-enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+      ),
     );
   });
 
@@ -51,8 +51,8 @@ describe('transform youtube link to iframe player', () => {
       .process(markdown1);
     assert.ok(
       String(file).includes(
-        '<iframe width="560" height="315" src="https://www.youtube.com/embed/enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
-      )
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+      ),
     );
   });
 
@@ -65,8 +65,8 @@ describe('transform youtube link to iframe player', () => {
       .process(markdown2);
     assert.ok(
       String(file).includes(
-        '<iframe width="560" height="315" src="https://www.youtube.com/embed/-enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
-      )
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/-enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+      ),
     );
   });
 
@@ -79,8 +79,8 @@ describe('transform youtube link to iframe player', () => {
       .process(markdown2);
     assert.ok(
       String(file).includes(
-        '<iframe width="640" height="320" src="https://www.youtube.com/embed/-enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
-      )
+        '<iframe width="640" height="320" src="https://www.youtube.com/embed/-enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+      ),
     );
   });
 
@@ -94,8 +94,8 @@ describe('transform youtube link to iframe player', () => {
       .process(markdown3);
     assert.ok(
       String(file).includes(
-        '<iframe width="560" height="315" src="https://www.youtube.com/embed/gU8F2NWggsA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
-      )
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/gU8F2NWggsA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+      ),
     );
   });
 });
