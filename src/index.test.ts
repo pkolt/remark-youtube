@@ -20,7 +20,11 @@ describe('transform youtube link to iframe player', () => {
       .use(remarkRehype)
       .use(rehypeStringify)
       .process(markdown1);
-    assert.match(String(file), /<iframe/);
+    assert.ok(
+      String(file).includes(
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+      )
+    );
   });
 
   it('type is link (youtube.com)', async () => {
@@ -31,7 +35,11 @@ describe('transform youtube link to iframe player', () => {
       .use(remarkRehype)
       .use(rehypeStringify)
       .process(markdown2);
-    assert.match(String(file), /<iframe/);
+    assert.ok(
+      String(file).includes(
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/-enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+      )
+    );
   });
 
   it('type is text (youtu.be)', async () => {
@@ -41,7 +49,11 @@ describe('transform youtube link to iframe player', () => {
       .use(remarkRehype)
       .use(rehypeStringify)
       .process(markdown1);
-    assert.match(String(file), /<iframe/);
+    assert.ok(
+      String(file).includes(
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+      )
+    );
   });
 
   it('type is text (youtube.com)', async () => {
@@ -51,7 +63,11 @@ describe('transform youtube link to iframe player', () => {
       .use(remarkRehype)
       .use(rehypeStringify)
       .process(markdown2);
-    assert.match(String(file), /<iframe/);
+    assert.ok(
+      String(file).includes(
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/-enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+      )
+    );
   });
 
   it('setup sizes', async () => {
@@ -61,7 +77,11 @@ describe('transform youtube link to iframe player', () => {
       .use(remarkRehype)
       .use(rehypeStringify)
       .process(markdown2);
-    assert.match(String(file), /<iframe width="640" height="320"/);
+    assert.ok(
+      String(file).includes(
+        '<iframe width="640" height="320" src="https://www.youtube.com/embed/-enTFE2c68FQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+      )
+    );
   });
 
   it('type is link with si (youtu.be)', async () => {
@@ -72,6 +92,10 @@ describe('transform youtube link to iframe player', () => {
       .use(remarkRehype)
       .use(rehypeStringify)
       .process(markdown3);
-    assert.match(String(file), /<iframe/);
+    assert.ok(
+      String(file).includes(
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/gU8F2NWggsA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+      )
+    );
   });
 });
